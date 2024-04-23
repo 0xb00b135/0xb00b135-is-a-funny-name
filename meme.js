@@ -1,4 +1,4 @@
-var b00bz = document.querySelectorAll('[title="Sletter spørgeskemaet, afsnit, spørgsmål samt respondenter og deres svar"]')[0].parentNode.parentNode.parentNode.parentNode.parentNode;
+var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]')[0].parentNode;
 const clone = b00bz.cloneNode(true);
 b00bz.parentNode.replaceChild(clone, b00bz);
 
