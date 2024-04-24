@@ -119,8 +119,8 @@ function checkCok(){
     if (cok.includes("meme")){
         var c = cok.at(cok.indexOf("meme") + 5);
         if (c != '0'){
-            c -= 1;
-            document.cookie = "meme="+c;
+            //c -= 1;
+            //document.cookie = "meme="+c;    // lets only prompt once ever instead...
         } else {buh=true;}
     } else {buh=true;}
     if (buh) {
