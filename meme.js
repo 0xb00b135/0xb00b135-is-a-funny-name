@@ -1,5 +1,6 @@
-var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]')[0].parentNode;
+var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]');
 if (b00bz != null){
+    b00bz = [0].parentNode;
     const clone = b00bz.cloneNode(true);
     b00bz.parentNode.replaceChild(clone, b00bz);
 }
