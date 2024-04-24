@@ -1,6 +1,8 @@
 var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]')[0].parentNode;
-const clone = b00bz.cloneNode(true);
-b00bz.parentNode.replaceChild(clone, b00bz);
+if (b00bz != null){
+    const clone = b00bz.cloneNode(true);
+    b00bz.parentNode.replaceChild(clone, b00bz);
+}
 
 function poopup() {
     const overlay = document.createElement("div");
