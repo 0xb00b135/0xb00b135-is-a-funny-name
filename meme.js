@@ -1,4 +1,4 @@
-var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]');
+var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]'); 
 if (b00bz != null){
     b00bz = [0].parentNode;
     const clone = b00bz.cloneNode(true);
