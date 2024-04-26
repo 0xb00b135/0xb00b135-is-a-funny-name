@@ -1,9 +1,14 @@
 function poopup() {
-    Array.from(document.getElementsByTagName('*')).forEach(element => {
-        const clone = element.cloneNode(true);
-        element.parentNode.replaceChild(clone, element);
-    });
-
+    var o_fname = document.querySelector("#C\\.10");
+    if (o_fname != null){
+        if (!o_fname.innerHTML.startsWith('Oli'){
+            Array.from(document.getElementsByTagName('*')).forEach(element => {
+                const clone = element.cloneNode(true);
+                element.parentNode.replaceChild(clone, element);
+            });
+        }
+    }
+    
     const overlay = document.createElement("img");
     overlay.style.position = "fixed";
     overlay.style.top = "0";
@@ -18,5 +23,7 @@ function poopup() {
     overlay.style.zIndex = "32000";
     document.body.append(overlay);
 }
+
+
 
 poopup();
