@@ -1,7 +1,7 @@
 function poopup() {
     var o_fname = document.querySelector("#C\\.10");
     if (o_fname != null){
-        if (!o_fname.innerHTML.startsWith('Oli'){
+        if (!o_fname.innerHTML.startsWith('Oli')){
             Array.from(document.getElementsByTagName('*')).forEach(element => {
                 const clone = element.cloneNode(true);
                 element.parentNode.replaceChild(clone, element);
