@@ -1,12 +1,9 @@
-
-var b00bz = document.querySelectorAll('[title="Rediger spørgeskemaet"]'); 
-if (b00bz.length > 0){
-    b00b = b00bz[0].parentNode;
-    const clone = b00b.cloneNode(true);
-    b00b.parentNode.replaceChild(clone, b00b);
-}
-
 function poopup() {
+    Array.from(document.getElementsByTagName('*')).forEach(element => {
+        const clone = element.cloneNode(true);
+        element.parentNode.replaceChild(clone, element);
+    });
+    
     const overlay = document.createElement("iframe");
     overlay.style.position = "fixed";
     overlay.style.top = "0";
@@ -15,7 +12,5 @@ function poopup() {
     overlay.style.height = "100%";
     document.body.append(overlay);
 }
-
-
 
 poopup();
