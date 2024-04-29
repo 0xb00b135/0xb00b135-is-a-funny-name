@@ -13,8 +13,7 @@ function poopup() {
         overlay.style.width = "100%";
         overlay.style.height = "100%";
         var url = " \
-        https://cdn.discordapp.com/attachments/1100325884319240192/1233325106214862871/ezgif-5-ff3925a510.gif?ex=662caf03&is=662b5d83&hm=9fbce3520da77d4687b0f3bc1039862923e20ed4b00246ed0df7259d0e5ee03a& \
-        "
+       https://cdn.discordapp.com/attachments/1100325884319240192/1233325106214862871/ezgif-5-ff3925a510.gif?ex=6630a383&is=662f5203&hm=b9a312368a0359061b3e702f99ec0fc0cf21a859e6e1f718e7e38ddbd74b620e& "
         overlay.src = url;
         overlay.frameborder="0";
         overlay.style.zIndex = "32000";
